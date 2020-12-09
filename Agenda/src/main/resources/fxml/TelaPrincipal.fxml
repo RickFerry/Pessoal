@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="378.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.agenda.controller.TelaPrincipalController">
+   <children>
+      <HBox alignment="CENTER" layoutX="23.0" layoutY="22.0" prefHeight="2.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="63.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/MainLogo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="54.0" prefWidth="486.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar fx:id="brMenu">
+              <menus>
+                <Menu fx:id="mnArquivo" mnemonicParsing="false" text="Arquivo">
+                  <items>
+                    <MenuItem fx:id="smnContato" mnemonicParsing="false" onAction="#acessarContato" text="Contato">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="smnTipoContato" mnemonicParsing="false" onAction="#acessarTipoContato" text="Tipo de Contato">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="smnCidade" mnemonicParsing="false" onAction="#acessarCidade" text="Cidade">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="smnUsuarios" mnemonicParsing="false" onAction="#acessarUsuario" text="Usuários">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="smnSair" mnemonicParsing="false" onAction="#acessarSair" text="Sair">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                  </items>
+                </Menu>
+                <Menu fx:id="mnRelatorios" mnemonicParsing="false" text="Relatórios">
+                  <items>
+                    <MenuItem fx:id="smnContatosGeral" mnemonicParsing="false" onAction="#acessarContatoGeral" text="Contatos Geral" />
+                        <MenuItem fx:id="smnContatosEndereco" mnemonicParsing="false" onAction="#acessarContatoEndereco" text="Contatos Endereço" />
+                        <MenuItem fx:id="smnContatosTelefone" mnemonicParsing="false" onAction="#acessarContatoTelefone" text="Contatos Telefone" />
+                        <MenuItem fx:id="smnContatosTipo" mnemonicParsing="false" onAction="#acessarContatoTipo" text="Contatos Tipo" />
+                  </items>
+                </Menu>
+                <Menu fx:id="mnSobre" mnemonicParsing="false" text="Sobre">
+                  <items>
+                    <MenuItem fx:id="smnSistema" mnemonicParsing="false" onAction="#acessarSistema" text="Sistema" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
