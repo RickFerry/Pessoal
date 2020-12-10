@@ -3,7 +3,6 @@ package com.mycompany.agenda.controller;
 
 import com.jfoenix.controls.JFXTextField;
 import com.mycompany.agenda.dao.CrudGenericoDao;
-import com.mycompany.agenda.dao.TipoContatoDao;
 import com.mycompany.agenda.model.TipoContato;
 import com.mycompany.agenda.util.Alerta;
 import java.net.URL;
