@@ -1,16 +1,13 @@
-com\mycompany\agenda\controller\ICadastro.class
-com\mycompany\agenda\controller\UsuarioController.class
 com\mycompany\agenda\model\Usuario.class
 com\mycompany\agenda\util\Uf.class
 com\mycompany\agenda\controller\ContatoController.class
 com\mycompany\agenda\model\Cidade.class
 com\mycompany\agenda\dao\ConexaoBanco.class
 com\mycompany\agenda\controller\ContatoController$1.class
-com\mycompany\agenda\model\TipoContato.class
 com\mycompany\agenda\util\Alerta.class
 com\mycompany\agenda\controller\TelaPrincipalController.class
 com\mycompany\agenda\model\Contato.class
-com\mycompany\agenda\dao\TipoContatoDao.class
+com\mycompany\agenda\dao\CidadeDao.class
 com\mycompany\agenda\controller\TipoContatoController.class
 com\mycompany\agenda\controller\CidadeController.class
 com\mycompany\agenda\dao\CrudGenericoDao.class

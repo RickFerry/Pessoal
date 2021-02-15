@@ -3,7 +3,9 @@ package com.mycompany.agenda.controller;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import com.mycompany.agenda.dao.CidadeDao;
 import com.mycompany.agenda.dao.CrudGenericoDao;
+import com.mycompany.agenda.dao.TipoContatoDao;
 import com.mycompany.agenda.model.Cidade;
 import com.mycompany.agenda.model.TipoContato;
 import com.mycompany.agenda.util.Alerta;
@@ -90,11 +92,15 @@ public class CidadeController implements Initializable, ICadastro {
 
     @FXML
     private void excluirRegistro(ActionEvent event) {
-        if(Alerta.msgConfirmacao(tfDescricao.getText())){
-            dao.excluir(objselecionado);
-            limparCamposFormulario();
-            atualizarTabela();
-            Alerta.msgInformacao("Exclusão realizada com sucesso!!!");
+        if(CidadeDao.liberaExclusao(objselecionado.getId())){
+            if(Alerta.msgConfirmacao(tfDescricao.getText())){
+                dao.excluir(objselecionado);
+                limparCamposFormulario();
+                atualizarTabela();
+                Alerta.msgInformacao("Exclusão realizada com sucesso!!!");
+            }
+        }else{
+            Alerta.msgInformacao("Não autorizado.\nTipo de cidade em uso.");
         }
     }
 

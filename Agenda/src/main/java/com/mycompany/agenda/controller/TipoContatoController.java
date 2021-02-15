@@ -3,6 +3,7 @@ package com.mycompany.agenda.controller;
 
 import com.jfoenix.controls.JFXTextField;
 import com.mycompany.agenda.dao.CrudGenericoDao;
+import com.mycompany.agenda.dao.TipoContatoDao;
 import com.mycompany.agenda.model.TipoContato;
 import com.mycompany.agenda.util.Alerta;
 import java.net.URL;
@@ -80,11 +81,15 @@ public class TipoContatoController implements Initializable, ICadastro {
 
     @FXML
     private void excluirRegistro(ActionEvent event) {
-        if(Alerta.msgConfirmacao(tfDescricao.getText())){
-            dao.excluir(objselecionado);
-            limparCamposFormulario();
-            atualizarTabela();
-            Alerta.msgInformacao("Exclusão realizada com sucesso!!!");
+        if(TipoContatoDao.liberaExclusao(objselecionado.getId())){
+            if(Alerta.msgConfirmacao(tfDescricao.getText())){
+                dao.excluir(objselecionado);
+                limparCamposFormulario();
+                atualizarTabela();
+                Alerta.msgInformacao("Exclusão realizada com sucesso!!!");
+            }
+        }else{
+            Alerta.msgInformacao("Não autorizado.\nTipo de contato em uso.");
         }
     }
 
