@@ -1,0 +1,29 @@
+.pane {
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, blue 0%, silver 100%);	
+}
+
+.text-field{
+	
+}
+
+.password-field{
+	
+}
+
+.btnEntrar {
+	-fx-cursor: hand;
+}
+
+.btnEntrar:hover {
+	-fx-background-color: green;
+	-fx-text-fill: white;
+}
+
+.btnSair {
+	-fx-cursor: hand;
+}
+
+.btnSair:hover {
+	-fx-background-color: red;
+	-fx-text-fill: white;
+}
